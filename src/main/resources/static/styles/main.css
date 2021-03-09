@@ -1,0 +1,82 @@
+body{
+    background-color: #e60c3b;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-family: Bahnschrift;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+    font-family: "Comic Sans MS";
+}
+
+a{
+    font-family: Tahoma;
+    text-decoration-line: none;
+    margin-right: 15px;
+    margin-left:15px;
+}
+
+.nav-bar li:hover{
+    font-size: 20px;
+    opacity: 100%;
+    transition: all 700ms ease;
+    background-color: #ee0c0c;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-bar li{
+    display: flex;
+    justify-content: flex-end;
+    background-color: #e58326;
+    opacity: 85%;
+    list-style-type: none;
+    border-radius: 5px;
+    border: solid 2px black;
+    margin-right: 30px;
+}
+
+.highlighted a{
+    font-size: 100px;
+    font-weight: bold;
+    margin-right: 15px;
+    margin-left:15px;
+}
+
+.submitField{
+    background-color: blue;
+
+
+}
+
+.List-of-posts li{
+    display: flex;
+    flex-direction: column;
+    background: lightgray;
+    border-radius: 2px;
+    border: 2px solid black;
+    width: 350px;
+    height: 350px;
+    list-style-type: none;
+}
+
+.List-of-posts p{
+
+}
+
+.List-of-posts h2{
+    font-size: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

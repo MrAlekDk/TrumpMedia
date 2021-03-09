@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragments/head.html(currentPage='Home 🎉')">
+<body>
+<header th:replace="fragments/header.html(h1text='TrumpMedia - Where no fake news lives', currentPage=${currentPage})"></header>
+<td>
+    <span th:if="${loggedIn == true}">
+        <p>Welcome back</p></span>
+    <span th:unless="${loggedIn== true}">
+        <p>Please log in</p></span>
+</td>
+
+<td th:switch="${userType}">
+    <span th:case="'free'">
+        <p>Consider paying</p>
+    </span>
+    <span th:case="'paying'">
+<p>Consider upgrading to premium</p>
+    </span>
+    <span th:case="'premium'">
+<p>We hope you are happy with your account</p>
+    </span>
+</td>
+<footer th:replace="fragments/footer.html"></footer>
+</body>
+</html>

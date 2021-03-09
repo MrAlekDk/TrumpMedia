@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragments/head.html(currentPage='Dashboard 📈')">
+</head>
+<body>
+<header th:replace="fragments/header.html(h1text='Post about Trump', currentPage=${currentPage})"></header>
+
+
+
+
+<form action="/submit" method="post" class="submitField">
+    <label for="title">Title</label><br>
+    <input type="text" id="title" name="title" placeholder="Title of post"><br>
+
+    <label for="text">Content</label><br>
+    <input type="text" id="text" name="content" placeholder="Write something"><br>
+
+    <label for="date">Date</label><br>
+    <input type="date" id="date" name="date"><br>
+
+    <label>Public or private</label><br>
+
+    <label for="public">Public</label>
+    <input type="radio" id="public" name="public-or-private" value="public">
+
+    <label for="private">Private</label>
+    <input type="radio" id="private" name="public-or-private" value="private" checked><br>
+
+    <button>Send post</button>
+
+</form>
+
+
+<section class="List-of-posts">
+    <ul th:each="post : ${posts}">
+        <li >
+            <h2 th:text="${post.title}"></h2>
+            <p th:text="${post.content}"></p>
+            <p th:text="${post.date}"></p>
+        </li>
+    </ul>
+</section>
+
+<footer th:replace="fragments/footer.html"></footer>
+</body>
+</html>
